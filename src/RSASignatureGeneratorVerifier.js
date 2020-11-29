@@ -2,7 +2,7 @@ const { generateKeyPairSync, sign, verify, constants } = require("crypto");
 const { writeFileSync, readFileSync } = require("fs");
 
 // Reading the file data as string using utf-8 encoding
-const fileData = readFileSync("../files/test.txt", "utf-8");
+const fileData = readFileSync("../files/teste.txt", "utf-8");
 
 const keyOptions = [
   {
@@ -21,7 +21,7 @@ const keyOptions = [
 ];
 
 const [
-  { publicKey: publicKey, privateKey: privateKey },
+  { publicKey, privateKey },
 ] = keyOptions.map((options) => generateKeyPairSync("rsa", options));
 
 // Writing the public and private keys into two separated files
