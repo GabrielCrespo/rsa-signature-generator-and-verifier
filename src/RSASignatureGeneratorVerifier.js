@@ -3,7 +3,6 @@ const { writeFileSync, readFileSync } = require("fs");
 
 // Reading the file data as string using utf-8 encoding
 const fileData = readFileSync("../files/test.txt", "utf-8");
-console.log(fileData)
 
 const keyOptions = [
   {
